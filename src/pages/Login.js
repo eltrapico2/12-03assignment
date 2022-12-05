@@ -1,13 +1,11 @@
-import {Routes, Route} from 'react-router-dom';
+import LoginForm from '../components/LoginForm';
 
 function Login() {
   return(
     <div>
-        <Routes>
-          <Route path='/registrationform' element={<RegistrationForm />}/>;
-        </Routes>
-      </div>
-    
+      <h1>Input Data for Login..</h1>
+      <LoginForm />
+    </div>
   )
 }
 

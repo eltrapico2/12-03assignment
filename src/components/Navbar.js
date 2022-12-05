@@ -1,6 +1,6 @@
 import {Link} from 'react-router-dom';
 
-function Navbar({LogIn}) {
+function Navbar() {
   return(
     <nav className="navbar navbar-expand-lg bg-primary">
       <div className="container-fluid">
@@ -20,7 +20,7 @@ function Navbar({LogIn}) {
           <form className="d-flex" >
             {/* <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/> */}
             
-            <Link className="btn btn-outline-dark" to='/Register' type="button">Login</Link>
+            <Link className="btn btn-outline-dark" to='/Login' type="button">Login</Link>
           </form>
         </div>
       </div>
