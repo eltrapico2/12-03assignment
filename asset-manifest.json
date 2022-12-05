@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/eltrapico2/12-03assignment.git/static/css/main.073c9b0a.css",
+    "main.js": "/eltrapico2/12-03assignment.git/static/js/main.37ca7364.js",
+    "static/media/abs2.jpg": "/eltrapico2/12-03assignment.git/static/media/abs2.868767bd7fe59a3abcc8.jpg",
+    "static/media/abs3.jpg": "/eltrapico2/12-03assignment.git/static/media/abs3.eee3dd49bd495cdfa0e5.jpg",
+    "static/media/abs1.jpg": "/eltrapico2/12-03assignment.git/static/media/abs1.8679b72c15d6ea5bac53.jpg",
+    "static/media/abs4.jpg": "/eltrapico2/12-03assignment.git/static/media/abs4.12599caac2b092792def.jpg",
+    "index.html": "/eltrapico2/12-03assignment.git/index.html",
+    "main.073c9b0a.css.map": "/eltrapico2/12-03assignment.git/static/css/main.073c9b0a.css.map",
+    "main.37ca7364.js.map": "/eltrapico2/12-03assignment.git/static/js/main.37ca7364.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.37ca7364.js"
+  ]
+}
