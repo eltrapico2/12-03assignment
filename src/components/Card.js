@@ -2,7 +2,7 @@ import {Link} from 'react-router-dom';
 
 function Card(prop) {
   return(
-    <div className='container-fluid px-0 mx-0 mt-4'>
+    <div className='container-fluid p-3 mx-0 mt-4'>
       <div className='card' style={{width: '15rem'}}>
       <img src={prop.img} className='card-img-top' alt='...' />
       <div className='card-body'>
