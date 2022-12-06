@@ -20,7 +20,7 @@ function Navbar() {
           <form className="d-flex" >
             {/* <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/> */}
             
-            <Link className="btn btn-outline-dark" to='/Login' type="button">Login</Link>
+            <Link className="btn btn-outline-dark" to='/Register' type="button">Register</Link>
           </form>
         </div>
       </div>
