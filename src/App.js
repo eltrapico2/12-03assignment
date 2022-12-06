@@ -14,7 +14,7 @@ function App() {
       <Navbar />
       <div>
         <Routes>
-          <Route path='/12-03assignment' element={<Home />} />;
+          <Route path='/' element={<Home />} />;
           <Route path='/register' element={<Register />}/>;
           <Route path='/profile' element={<Profile />}/>;
           <Route path='/login' element={<Login />}/>;
