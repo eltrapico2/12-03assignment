@@ -5,7 +5,7 @@ import abs4 from '../assets/img/abs4.jpg';
 
 function Cards() {
   return(
-    <div className='container' style={{display: 'inline-flex'}}>
+    <div className='container-fluid' style={{display: 'inline-flex'}}>
       
         <Card img={abs4}/>
         <Card img={abs4}/>
