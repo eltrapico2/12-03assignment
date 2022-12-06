@@ -4,7 +4,7 @@ function Navbar() {
   return(
     <nav className="navbar navbar-expand-lg bg-primary">
       <div className="container-fluid">
-        <Link className="navbar-brand" to="/">Navbar</Link>
+        <Link className="navbar-brand fw-bold" to="/">eL</Link>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
@@ -21,6 +21,7 @@ function Navbar() {
             {/* <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/> */}
             
             <Link className="btn btn-outline-dark" to='/Register' type="button">Register</Link>
+            <Link className="btn btn-outline-dark" to='/Login' type="button">Log in</Link>
           </form>
         </div>
       </div>
