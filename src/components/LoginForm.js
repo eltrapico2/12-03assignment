@@ -1,24 +1,22 @@
-import React from 'react';
-
 function LoginForm() {
   return(
     <div>
-      <form className='add-form'>
-      <div className='form-control'>
+      <form>
+      <div>
         <label>Email Address</label>
         <input
           type='text'
           placeholder='Email Address'
         />
       </div>
-      <div className='form-control'>
+      <div>
         <label>Password</label>
         <input
           type='text'
           placeholder='Password'
         />
       </div>
-      <input type='submit' value='Login' className='btn btn-block' />
+      <input type='submit' value='Login' className='btn btn-outline-dark' />
       </form>
     </div>
   )
