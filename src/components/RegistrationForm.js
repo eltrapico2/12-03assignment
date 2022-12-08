@@ -23,7 +23,6 @@ const submitBtn = function(e) {
   getData.append('username', username);
   getData.append('password', password);
   getData.append('function', 'insert');
-
   axios({
     method: 'POST',
     url: 'http://localhost/sat-app/12-03assignmentdb.php',
@@ -32,13 +31,13 @@ const submitBtn = function(e) {
     }).then(function(response) {
     alert("Success!");
     const url = 'http://localhost/sat-app/12-03assignmentdb.php';
-    axios.get(url).then((response)=>{
+    axios.get(url).then((response) => {
     setUsers(response.data);
-    //console.log(users);
+    console.log(users);
     })
     }).catch(function(response) {
     alert("Error!");
-    });
+  });
 }
 
   return(
