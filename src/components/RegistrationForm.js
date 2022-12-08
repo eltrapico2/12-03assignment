@@ -28,14 +28,14 @@ const submitBtn = function() {
     url: 'http://localhost/sat-app/12-03assignmentdb.php',
     data: getData,
     config: 'Content-Type = "multipart/form-data"'
-    }).then(function(_response) {
+    }).then(function(response) {
     //alert("Success!");
     const url = 'http://localhost/sat-app/12-03assignmentdb.php';
     axios.get(url).then((response)=>{
     setUsers(response.data);
     //console.log(users);
     })
-    }).catch(function(_response) {
+    }).catch(function(response) {
     alert("Error!");
     });
 }
@@ -63,7 +63,7 @@ const submitBtn = function() {
             </div>
           </div>
 
-          <div className="row mb-5 justify-content-start align-items-center">
+          <div className="row justify-content-start align-items-center">
             <label for="inputPassword" className='col-sm-4 col-form-label'>Password </label>
             <div class="col-sm-8">
               <input type="text" class="form-control" name="password" id="inputPassword" value={password} onChange = {(e) => setPword(e.target.value)}/>
