@@ -13,7 +13,7 @@ function Student() {
             setStudents(response.data);
             console.log(students);
         })
-    })
+    },[])
 
     const submitBtn = function(e) {
         e.preventDefault();

@@ -11,11 +11,12 @@ function RegistrationForm() {
     const url = 'http://localhost/sat-app/12-03assignmentdb.php'; //link to db
     axios.get(url).then((response)=>{
         setUsers(response.data);
-        console.log(users);
+       console.log(users);
     })
-})
+},[])
 
-const submitBtn = function() {
+const submitBtn = function(e) {
+  e.preventDefault();
   let getData = new FormData();
 
   getData.append('fullname', fullname);
@@ -29,7 +30,7 @@ const submitBtn = function() {
     data: getData,
     config: 'Content-Type = "multipart/form-data"'
     }).then(function(response) {
-    //alert("Success!");
+    alert("Success!");
     const url = 'http://localhost/sat-app/12-03assignmentdb.php';
     axios.get(url).then((response)=>{
     setUsers(response.data);
