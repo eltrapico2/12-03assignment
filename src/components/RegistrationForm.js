@@ -16,48 +16,65 @@ function RegistrationForm() {
 })
 
 const submitBtn = function() {
-    let getData = new FormData();
+  let getData = new FormData();
 
-    getData.append('fullname', fullname);
-    getData.append('username', username);
-    getData.append('password', password);
-    getData.append('function', 'insert');
+  getData.append('fullname', fullname);
+  getData.append('username', username);
+  getData.append('password', password);
+  getData.append('function', 'insert');
 
-    axios({
-        method: 'POST',
-        url: 'http://localhost/sat-app/12-03assignmentdb.php',
-        data: getData,
-        config: 'Content-Type = "multipart/form-data"'
-    }).then(function(response) {
+  axios({
+    method: 'POST',
+    url: 'http://localhost/sat-app/12-03assignmentdb.php',
+    data: getData,
+    config: 'Content-Type = "multipart/form-data"'
+    }).then(function(_response) {
     //alert("Success!");
     const url = 'http://localhost/sat-app/12-03assignmentdb.php';
     axios.get(url).then((response)=>{
-        setUsers(response.data);
-        //console.log(users);
+    setUsers(response.data);
+    //console.log(users);
     })
-    }).catch(function(response) {
-        alert("Error!");
+    }).catch(function(_response) {
+    alert("Error!");
     });
 }
 
   return(
-    <div>
-        <h1>Users List</h1>
-        <center>
-        <form className='border' style={{width:'600px'}}>
-          <label className='fw-bold me-3  mt-5'>Full Name </label>
-            <input type="text" name="fullname" value={fullname} onChange = {(e) => setFname(e.target.value)}/><br/>
-            <label className='fw-bold  me-3 mt-2'>Username </label>
-            <input type="text" name="username" value={username} onChange = {(e) => setUname(e.target.value)}/><br/>
-            <label className='fw-bold  me-3 mt-2'>Password </label>
-            <input type="text" name="pasword" value={password} onChange = {(e) => setPword(e.target.value)}/><br/><br/>
-            <input type="submit" onClick={submitBtn} /><br/><br/>
+    <center>
+      <div></div>
+      <div class="container mt-5">
+        <form className="form-signup w-100 m-auto">
+          <div>
+            <h1 className="h3 my-5 fw-normal">Please Sign-up</h1>
+          </div>
+
+          <div class="row justify-content-start align-items-center">
+            <label for="inputFullname" className='col-sm-4 col-form-label'>Full Name </label>
+            <div className="col-sm-8">
+              <input type="text" className="form-control" name="fullname" id="inputFullname" value={fullname} onChange = {(e) => setFname(e.target.value)}/>
+            </div>
+          </div>
+
+          <div className="row 3 justify-content-start align-items-center">
+            <label for="inputUsername" className='col-sm-4 col-form-label'>Username </label>
+            <div className="col-sm-8">
+              <input type="text" className="form-control" name="username" id='inputUsername' value={username} onChange = {(e) => setUname(e.target.value)}/>
+            </div>
+          </div>
+
+          <div className="row mb-5 justify-content-start align-items-center">
+            <label for="inputPassword" className='col-sm-4 col-form-label'>Password </label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" name="password" id="inputPassword" value={password} onChange = {(e) => setPword(e.target.value)}/>
+            </div>
+          </div>
+
+          <button class="w-100 btn btn-lg btn-primary" type="submit" onClick={submitBtn}>Submit</button>
         </form>
-        </center>
-    </div>
+      </div>
+    </center>
   )
-
-
 }
 
 export default RegistrationForm;

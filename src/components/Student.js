@@ -15,7 +15,8 @@ function Student() {
         })
     })
 
-    const submitBtn = function() {
+    const submitBtn = function(e) {
+        e.preventDefault();
         let getData = new FormData();
 
         getData.append('fname', fname);
@@ -98,8 +99,7 @@ function Student() {
                 <input type="text" name="lname" value={lname} onChange = {(e) => setLname(e.target.value)}/><br/>
                 <label className='fw-bold  me-3 mt-2'>Username </label>
                 <input type="number" name="age" value={age} onChange = {(e) => setAge(e.target.value)}/><br/><br/>
-                <input type="submit" onClick={submitBtn} /><br/><br/>
-            
+                <input type="submit" onClick={submitBtn} />
             </form>
             </center>
             <table>
@@ -123,7 +123,6 @@ function Student() {
                     </tr>
                     )
                 })}
-
                 </tbody>
             </table>
         </div>

@@ -5,15 +5,27 @@ import abs4 from '../assets/img/abs4.jpg';
 
 function Cards() {
   return(
-    <div className='container-fluid' style={{display: 'inline-flex'}}>
-      
-        <Card img={abs4}/>
-        <Card img={abs4}/>
-        <Card img={abs4}/>
-        <Card img={abs4}/>
-        <Card img={abs4}/>
-        <Card img={abs4}/>
-      
+    <div className='container-fluid align-items-center text-center'>
+      <div className='row justify-content-center text-center'>
+        <div className='col'>
+          <Card img={abs4}/>
+        </div>
+        <div className='col'>
+          <Card img={abs4}/>
+        </div>
+        <div className='col'>
+          <Card img={abs4}/>
+        </div>
+        <div className='col'>
+          <Card img={abs4}/>
+        </div>
+        <div className='col'>
+          <Card img={abs4}/>
+        </div>
+        <div className='col'>
+          <Card img={abs4}/>
+        </div>
+      </div>
     </div>
   )
 }

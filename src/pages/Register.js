@@ -2,8 +2,7 @@ import RegistrationForm from '../components/RegistrationForm';
 
 function Register() {
   return(
-    <div>
-      <h1>Input Data for Registration..</h1>
+    <div className='mt-5'>
       <RegistrationForm />;
     </div>
   )

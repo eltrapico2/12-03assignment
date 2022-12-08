@@ -2,7 +2,7 @@ import LoginForm from '../components/LoginForm';
 
 function Login() {
   return(
-    <div>
+    <div className='mt-5'>
       <LoginForm />
     </div>
   )

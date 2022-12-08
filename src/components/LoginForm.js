@@ -4,7 +4,7 @@ function LoginForm() {
   return(
     <div>
       <form className="form-signin w-100 m-auto">
-        <div>
+        <div className='mt-5'>
         <img class="mb-4 mt-3 rounded-3" src={MyAvatar} alt="" width="57" height="57" />
         <h1 class="h3 mb-3 mt-4 fw-normal">Please log in</h1>
         </div>
@@ -23,6 +23,7 @@ function LoginForm() {
             <input type="checkbox" value="remember-me" /> Remember me
           </label>
         </div>
+        
         <button class="w-100 btn btn-lg btn-primary" type="submit">Log in</button>
       </form>
     </div>
