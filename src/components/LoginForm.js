@@ -1,6 +1,7 @@
 import MyAvatar from '../assets/img/MyAvatar.jpg';
 
 function LoginForm() {
+
   return(
     <div>
       <form className="form-signin w-100 m-auto">

@@ -13,7 +13,7 @@ function RegistrationForm() {
         setUsers(response.data);
        console.log(users);
     })
-},[])
+})
 
 const submitBtn = function(e) {
   e.preventDefault();
@@ -30,6 +30,7 @@ const submitBtn = function(e) {
     config: 'Content-Type = "multipart/form-data"'
     }).then(function(response) {
     alert("Success!");
+
     const url = 'http://localhost/sat-app/12-03assignmentdb.php';
     axios.get(url).then((response) => {
     setUsers(response.data);
@@ -37,6 +38,54 @@ const submitBtn = function(e) {
     })
     }).catch(function(response) {
     alert("Error!");
+  });
+}
+
+const delBtn = function(e) {
+  //alert (e.currentTarget.id);
+  let getData = new FormData();
+  
+  getData.append('user_id', e.currentTarget.id);
+  getData.append('function', 'delete');
+  
+  axios({
+      method: 'POST',
+      url: 'http://localhost/sat-app/12-03assignmentdb.php',
+      data: getData,
+      config: 'Content-Type = "multipart/form-data"'
+  }).then(function(response) {
+  //alert("Success!");
+  const url = 'http://localhost/sat-app/12-03assignmentdb.php';
+  axios.get(url).then((response)=>{
+      setUsers(response.data);
+      console.log(users);
+  })
+  }).catch(function(response) {
+      alert("Error!");
+  });
+}
+
+const upBtn = function(e) {
+  //alert(e.currentTarget.title);
+  let getData = new FormData();
+
+  getData.append('user_id', e.currentTarget.title);
+  getData.append('fullname', document.getElementById('fullname' + e.currentTarget.title).value);
+  getData.append('username', document.getElementById('username' + e.currentTarget.title).value);
+  getData.append('password', document.getElementById('password' + e.currentTarget.title).value);
+
+  getData.append('function', 'update');
+  axios({
+      method: 'POST',
+      url: 'http://localhost/sat-app/12-03assignmentdb.php',
+      data: getData,
+      config: 'Content-Type = "multipart/form-data"'
+  }).then(function(result) {
+  alert("Successfully updated!");
+  
+  }).catch(function(response) {
+      alert("Error!");
+      console.log('error');
   });
 }
 
@@ -73,6 +122,32 @@ const submitBtn = function(e) {
           <button class="w-100 btn btn-lg btn-primary" type="submit" onClick={submitBtn}>Submit</button>
         </form>
       </div>
+        <div className='container-fluid mt-5'>
+          <h4 className='mb-3 fw-bolder'>List of Users</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th>FULLNAME</th>
+                        <th>USERNAME</th>
+                        <th>PASSWORD</th>
+                    </tr>
+                </thead>
+                <tbody>
+                  {users.map((val) =>{
+                      return(
+                      <tr key={val.user_id}>
+                          <td><input defaultValue={val.fullname} id={'fullname'+val.user_id} /></td>
+                          <td><input defaultValue={val.username} id={'username'+val.user_id}/></td>
+                          <td><input defaultValue={val.password} id={'password'+val.used_id} /></td>
+                          <td><button className='btn btn-danger' id={val.user_id} onClick={delBtn} >Delete</button></td>
+                          <td><button className='btn btn-primary' title={val.user_id} onClick={upBtn} >Update</button></td>
+                      </tr>
+                      )
+                  })}
+                </tbody>
+            </table>
+        </div>
+      
     </center>
   )
 }

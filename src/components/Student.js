@@ -23,7 +23,6 @@ function Student() {
         getData.append('lname', lname);
         getData.append('age', age);
         getData.append('function', 'insert');
-
         axios({
             method: 'POST',
             url: 'http://localhost/sat-app/db.php',
@@ -31,6 +30,7 @@ function Student() {
             config: 'Content-Type = "multipart/form-data"'
         }).then(function(response) {
         //alert("Success!");
+        
         const url = 'http://localhost/sat-app/db.php';
         axios.get(url).then((response)=>{
             setStudents(response.data);
