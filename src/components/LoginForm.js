@@ -10,8 +10,8 @@ function LoginForm() {
         <h1 class="h3 mb-3 mt-4 fw-normal">Please log in</h1>
         </div>
         <div class="form-floating">
-          <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" />
-          <label for="floatingInput">Email address</label>
+          <input type="text" class="form-control" id="floatingInput" placeholder="Username" />
+          <label for="floatingInput">Username</label>
         </div>
 
         <div class="form-floating">
