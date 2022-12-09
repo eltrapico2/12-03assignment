@@ -13,6 +13,7 @@ function App() {
       <Navbar />
       <div>
         <Routes>
+          <Route path="/12-03-assignment" element={<Home />} />;
           <Route path="/" element={<Home />} />;
           <Route path="/register" element={<Register />}/>;
           <Route path="/profile" element={<Profile />}/>;

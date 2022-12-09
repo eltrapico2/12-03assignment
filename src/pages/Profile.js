@@ -1,6 +1,12 @@
+import ProfileForm from '../components/ProfileForm';
+
 function Profile() {
   return(
-    <h1>Profile Data..</h1>
+    <div>
+      <h1>Profile Data..</h1>
+      <ProfileForm />
+    </div>
+    
   )
 }
 
