@@ -13,7 +13,7 @@ function RegistrationForm() {
       setUsers(response.data);
       console.log(users);
     })
-})
+},[])
 
 const submitBtn = function(e) {
   e.preventDefault();
@@ -80,7 +80,7 @@ const upBtn = function(e) {
       url: 'http://localhost/sat-app/12-03assignmentdb.php',
       data: getData,
       config: 'Content-Type = "multipart/form-data"'
-  }).then(function(response) {
+  }).then(function(result) {
   alert("Successfully updated!");
   
   }).catch(function(response) {
@@ -139,11 +139,11 @@ const upBtn = function(e) {
                     <tr key={val.user_id}>
                       <td><input defaultValue={val.fullname} id={'fullname'+val.user_id} /></td>
                       <td><input defaultValue={val.username} id={'username'+val.user_id}/></td>
-                      <td><input defaultValue={val.password} id={'password'+val.used_id} /></td>
+                      <td><input defaultValue={val.password} id={'password'+val.user_id}/></td>
                       <td><button className='btn btn-danger' id={val.user_id} onClick={delBtn} >Delete</button></td>
                       <td><button className='btn btn-primary' title={val.user_id} onClick={upBtn} >Update</button></td>
                     </tr>
-                   )
+                  )
                 })}
               </tbody>
             </table>
